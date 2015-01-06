@@ -1,0 +1,7 @@
+CONSTANT_VAL = "Hello"
+
+puts CONSTANT_VAL
+
+CONSTANT_VAL += " world !"
+
+puts CONSTANT_VAL
