@@ -25,3 +25,7 @@ def greet
 end
 
 greet { |name = "Anonymous"| puts "Hello #{name}"}
+greet do |name = "Qoo"|
+  puts "Hello #{name}"
+  puts "Pleasue~"
+end
