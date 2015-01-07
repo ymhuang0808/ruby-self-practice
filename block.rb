@@ -1,13 +1,18 @@
 def greet 
   puts "Greet!"
 
-  yield  # execute greet code block
-  yield  # execute greet code block
+  # 是否有 code block
+  if block_given?
+    yield  # execute greet code block
+    yield  # execute greet code block
+  else 
+    puts "NO BLOCK"
+  end
 
   puts "Greet!"
 end
 
-greet { puts "Hello" }
+greet
 greet { puts "Oh Hi Yo" }
 
 def greet 
