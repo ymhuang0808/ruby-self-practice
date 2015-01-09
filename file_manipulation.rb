@@ -6,3 +6,11 @@ File.open("default_param.rb", "r") do |f|
     puts line
   end
 end
+
+puts "======"
+
+File.open("funny_method.rb", "r") do |f|
+  # 讀取檔案整行，回傳 Array
+  lines = f.readlines
+  puts lines
+end
