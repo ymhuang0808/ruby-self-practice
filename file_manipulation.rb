@@ -14,3 +14,14 @@ File.open("funny_method.rb", "r") do |f|
   lines = f.readlines
   puts lines
 end
+
+puts "========="
+
+# Random access
+# 開啟檔案
+f = File.new("env.rb")
+# 隨機存取檔案
+f.seek(3, IO::SEEK_SET)
+puts f.readline
+# 關閉檔案
+f.close
