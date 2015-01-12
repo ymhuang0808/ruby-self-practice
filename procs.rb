@@ -19,3 +19,7 @@ p3 = lambda do
 end
 
 call_proc p3
+
+
+p4 = lambda { |x| puts "x = #{x}" }
+p4.call "Qooooooo"
