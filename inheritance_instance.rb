@@ -10,7 +10,7 @@ end
 
 class BaiDog < Dog
   def initialize(name, color)
-    # 父類別的相同方法
+    # 父類別的相同方法, ex. 父類別的 initialize 方法
     super(name)
     @color = color
   end
@@ -39,7 +39,7 @@ class B < A
 
   def dump
     puts "This is B."
-    super
+    super   # 父類別的 dump 方法
   end
 end
 
