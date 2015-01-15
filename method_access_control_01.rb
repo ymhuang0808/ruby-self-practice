@@ -9,6 +9,8 @@ class Person
   end
 
   def compare_age(p)
+    # p 物件為 Person 類別
+    # 所以在同一個或子類別下，可以呼叫 age 方法 (protected)
     if p.age > @age
       puts "The object's year is bigger."
     else
