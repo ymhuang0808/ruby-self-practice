@@ -1,6 +1,8 @@
 # protected access control
 class Person
   def initialize(age)
+    # age instance variable 無法直接讓外面存取
+    # 可以透過 accessor method
     @age = age
   end
 
@@ -25,3 +27,5 @@ end
 a = Person.new 12
 b = Person.new 16
 a.compare_age(b)
+# age method 為 protected 
+# a.age
