@@ -20,12 +20,44 @@ class Person
     end
   end
 
+  def talk(s)
+    puts s
+  end
+
+  def hello
+    talk "Hello!"
+  end
+
   # protected method
   protected :age
+  private :talk
+end
+
+class Boy < Person
+  def meet
+    talk "Man ~"
+  end
+end
+
+class Girl < Person
+  def meet
+    self.talk "Hi ~"
+  end
 end
 
 a = Person.new 12
 b = Person.new 16
 a.compare_age(b)
+a.hello
 # age method 為 protected 
 # a.age
+# talk method 為 private
+# a.talk
+
+b = Boy.new 22
+b.meet
+
+g = Girl.new 21
+# talk 為 private
+# 沒辦法透過 receiver 存取 private method
+# g.meet
