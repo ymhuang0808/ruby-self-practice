@@ -3,5 +3,11 @@ def inverse(x)
   1.0 / x
 end
 
-puts inverse(2)
-puts inverse('not numeric')
+begin
+  puts "before raise..."
+  puts inverse(2)
+  puts inverse('not numeric')
+  puts "after raise..."
+rescue
+  puts "in rescue"
+end
